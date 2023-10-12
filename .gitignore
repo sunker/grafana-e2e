@@ -1,3 +1,7 @@
+provisioning
+cypress/fixtures/provisioning
+
+
 # Logs
 logs
 *.log
