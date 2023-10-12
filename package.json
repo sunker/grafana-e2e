@@ -1,0 +1,45 @@
+{
+  "name": "@grafana/e2e-scenarios",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/esm/index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "dev": "yarn bundle -w",
+    "build": "tsc -p ./tsconfig.json && rollup -c rollup.config.ts",
+    "bundle": "rollup -c rollup.config.ts",
+    "clean": "rimraf ./dist ./compiled",
+    "typecheck": "tsc --emitDeclarationOnly false --noEmit",
+    "lint": "eslint . --ext .js,.tsx,.ts --cache",
+    "test": "jest --notify --watch"
+  },
+  "author": "Erik Sundell",
+  "license": "ISC",
+  "peerDependencies": {
+    "cypress": "^13.2.0"
+  },
+  "devDependencies": {
+    "@grafana/e2e-selectors": "^10.1.2",
+    "@grafana/eslint-config": "^6.0.0",
+    "@grafana/tsconfig": "^1.3.0-rc1",
+    "@rollup/plugin-node-resolve": "15.0.1",
+    "@types/jest": "^29.5.5",
+    "@types/node": "10.14.1",
+    "@types/uuid": "^9.0.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "cypress": "^13.2.0",
+    "esbuild": "0.16.17",
+    "pretty-format": "25.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "2.79.1",
+    "rollup-plugin-dts": "^5.0.0",
+    "rollup-plugin-esbuild": "5.0.0",
+    "rollup-plugin-node-externals": "^5.0.0",
+    "semver": "^7.5.4",
+    "typescript": "^4.5.2",
+    "uuid": "^9.0.1",
+    "yaml": "^2.3.2"
+  }
+}
